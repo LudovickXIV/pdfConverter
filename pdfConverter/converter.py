@@ -24,4 +24,4 @@ class Converter:
             'encoding': "UTF-8",
             'no-outline': None
         }
-        pdfkit.from_file(htmlFile, 'doc/pdf.pdf', options=options, css=css)
+        pdfkit.from_file(htmlFile, 'pdf.pdf', options=options, css=css)
