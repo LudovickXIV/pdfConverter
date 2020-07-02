@@ -20,7 +20,7 @@ class Converter:
         htmlFile = 'doc/html.html'
         options = {
             'page-size': 'A4',
-            'dpi': 800,
+            'dpi': 130,
             'orientation': 'Landscape',
             'margin-top': '0in',
             'margin-right': '0in',
