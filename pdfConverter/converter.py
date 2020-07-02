@@ -1,9 +1,14 @@
+import os
+
 import pdfkit
 
 class Converter:
 
     @staticmethod
     def convert(html, css):
+        if not os.path.exists('doc'):
+            os.makedirs('doc')
+
         with open('doc/html.html', 'wb+') as destination:
             for chunk in html.chunks():
                 destination.write(chunk)
