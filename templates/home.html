@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>
+            Select Html to upload:
+            <input type="file" name="fileToUploadHTML" id="fileToUploadHtml">
+        </p>
+        <p>
+            Select CSS to upload:
+            <input type="file" name="fileToUploadCSS" id="fileToUploadCSS">
+        </p>
+        <p>
+            <input type="submit" value="Upload Image" name="submit">
+        </p>
+    </form>
+{% endblock %}
