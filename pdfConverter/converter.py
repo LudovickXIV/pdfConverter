@@ -12,11 +12,12 @@ class Converter:
         with open('doc/html.html', 'wb+') as destination:
             for chunk in html.chunks():
                 destination.write(chunk)
-        with open('doc/css.css', 'wb+') as destination:
+
+        cssname = css.name
+        with open('doc/'+cssname, 'wb+') as destination:
             for chunk in css.chunks():
                 destination.write(chunk)
 
-        css = 'doc/css.css'
         htmlFile = 'doc/html.html'
         options = {
             'page-size': 'A4',
@@ -29,4 +30,4 @@ class Converter:
             'encoding': "UTF-8",
             'no-outline': None
         }
-        pdfkit.from_file(htmlFile, 'pdf.pdf', options=options, css=css)
+        pdfkit.from_file(htmlFile, 'pdf.pdf', options=options)
